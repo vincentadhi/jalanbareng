@@ -1,0 +1,73 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Pesan ke Whatsapp</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input { width: 100%; padding: 8px; box-sizing: border-box; }
+        .btn-kirim { display: block; width: 100%; padding: 10px; background-color: #25D366; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+      <center><h2>Isi biodatamu disini yaa 😆</h2></center>
+      <div class="panel panel-success">
+                <div class="panel-heading">
+                  <b> Harap isi dengan lengkap & detail 🤪</b>
+                </div> <br><br>
+        <form id="whatsappForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday Date:</label>
+                <input type="date" id="birthday" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat Lengkap :</label>
+                <input type="text" id="alamat" required>
+          </div>
+          <div class="form-group">
+                <label for="tanggal">Tanggal Ziarek & Misa bareng</label>
+                <input type="date" id="tanggal" required>
+            </div>
+            <button type="submit" class="btn-kirim">Kirim ke WhatsApp</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah form melakukan reload halaman
+
+            // Ambil nilai dari input
+            var nama = document.getElementById('nama').value;
+          var birthday = document.getElementById('birthday').value; 
+           var alamat = document.getElementById('alamat').value; 
+            var tanggal = document.getElementById('tanggal').value;
+
+            // Ganti dengan nomor WhatsApp Anda (misalnya: 6281234567890)
+            var nomorWhatsApp = '6281280748635'; 
+
+            // Format pesan WhatsApp
+            var pesan = 
+`Halo, nama lengkapku ${nama} yang berulang tahun ditanggal ${birthday}. Aku bisa pergi gereja bareng kok sama kamu ditanggal ${tanggal}. Oh iya besok jemput aku yaa di alamat ${alamat}. Terima Kasih yaa ! 😉`;
+            
+            // Konversi pesan ke format URL-encoded
+            var pesanEncoded = encodeURIComponent(pesan);
+
+            // Buat URL WhatsApp
+            var urlWhatsApp = `https://wa.me/${nomorWhatsApp}?text=${pesanEncoded}`;
+            
+            // Buka tab baru dengan URL WhatsApp
+            window.open(urlWhatsApp, '_blank').focus();
+        });
+    </script>
+
+</body>
+</html>
