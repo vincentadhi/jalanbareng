@@ -1,4 +1,15 @@
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>KIRIM  WA</title>
+    
+
+  </head>
+    
+  <body>
+  <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +24,16 @@
     </style>
 </head>
 <body>
-
+<audio src="https://feeldreams.github.io/tobelove.mp3" id="linkmp3" class="sembunyi"></audio>
     <div class="container">
+      <center>Hi Angela  👋 . Jadi aku mau ajak kamu misa bareng di Katedral Jakarta. Mungkin bisa sebelum misa kita ziarah dulu di gua marianya untuk Porta Sancta & doa rosario bareng hehe.. <br> Setelah itu mampir ke coffeshop Filosofi Kopi di postbloc dekat gereja Katedral<br>
+      Kalau kamu bersedia, langsung isi form dibawah ini yaa !</center>
       <center><h2>Isi biodatamu disini yaa 😆</h2></center>
       <div class="panel panel-success">
                 <div class="panel-heading">
                   <b> Harap isi dengan lengkap & detail 🤪</b>
                 </div> <br><br>
+        
         <form id="whatsappForm">
             <div class="form-group">
                 <label for="nama">Nama Lengkap:</label>
@@ -38,9 +52,17 @@
                 <input type="date" id="tanggal" required>
             </div>
           <div class="form-group">
-         <label for="waktu">Mau janjian jam berapa ?</label>
-         <input type="time" id="waktu" name="waktu" requred>
+         <label for="waktu">Mau ibadah jam berapa ?</label>
+         <input type="time" id="waktu" requred>
               </div>
+          
+          Pilihan jam Ibadah :<br>
+          1. 06:00<br>
+          2. 08:30<br>
+          3. 11:00<br>
+          4. 16:30<br>
+          5. 19:00<br>
+         <br>
             <button type="submit" class="btn-kirim">Kirim ke WhatsApp</button>
         </form>
     </div>
@@ -61,7 +83,7 @@
 
             // Format pesan WhatsApp
             var pesan = 
-`Hallo admin, nama lengkapku ${nama} yang berulang tahun ditanggal ${birthday}. Aku bisa pergi gereja bareng kok sama kamu ditanggal ${tanggal} jam ${waktu}. Oh iya besok jemput aku yaa di alamat ${alamat}. BTW salam kenal dan terima kasih yaa ! 😉`;
+`Hallo admin, nama lengkapku ${nama} yang berulang tahun ditanggal ${birthday}. Aku bisa pergi ke gereja bareng kok sama kamu ditanggal ${tanggal}. Oh iya besok jemput aku yaa di alamat ${alamat} jam ${waktu}. BTW salam kenal dan terima kasih yaa 😄 ! `;
             
             // Konversi pesan ke format URL-encoded
             var pesanEncoded = encodeURIComponent(pesan);
@@ -75,4 +97,8 @@
     </script>
 
 </body>
+</html>
+    
+  </body>
+  
 </html>
