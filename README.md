@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/22592875/README.md)
 # KIRIM  WA
 
 A Pen created on CodePen.
